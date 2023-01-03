@@ -92,3 +92,7 @@ Route ::get('/profile1/{lang}',function($lang){
 Route::get('list',[memberController::class,'show']);
 Route::POST('add',[addMcontroller::class,'addData']);
 Route::view('add','addmember');
+Route::get('listdel',[memberController::class,'list']);
+Route::get('delete/{id}',[memberController::class,'delete']);
+Route::get('edit/{id}',[memberController::class,'showData']);
+Route::POST('edit',[memberController::class,'update']);
