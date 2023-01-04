@@ -7,6 +7,9 @@ use App\Http\Controllers\storeController;
 use App\Http\Controllers\userAuth; 
 use App\Http\Controllers\uploadController;
 use App\Http\Controllers\addMcontroller;
+use App\Http\Controllers\MembersQB;
+use App\Http\Controllers\usersController;
+use App\Http\Controllers\employeeController;
 use Illuminate\Support\Facades\App;
 
 /*
@@ -96,3 +99,7 @@ Route::get('listdel',[memberController::class,'list']);
 Route::get('delete/{id}',[memberController::class,'delete']);
 Route::get('edit/{id}',[memberController::class,'showData']);
 Route::POST('edit',[memberController::class,'update']);
+Route::get('listQB',[MembersQB::class,'getAllresult']);
+Route::get('listQBf',[MembersQB::class,'find']);
+Route::get('list',[usersController::class,'opreations']);
+Route::get('list',[employeeController::class,'getData']);
