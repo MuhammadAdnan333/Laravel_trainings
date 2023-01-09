@@ -10,6 +10,9 @@ use App\Http\Controllers\addMcontroller;
 use App\Http\Controllers\MembersQB;
 use App\Http\Controllers\usersController;
 use App\Http\Controllers\employeeController;
+use App\Http\Controllers\MemberNewController;
+use App\Http\Controllers\MutatorController;
+use App\Http\Controllers\MemberRController;
 use Illuminate\Support\Facades\App;
 
 /*
@@ -103,3 +106,7 @@ Route::get('listQB',[MembersQB::class,'getAllresult']);
 Route::get('listQBf',[MembersQB::class,'find']);
 Route::get('list',[usersController::class,'opreations']);
 Route::get('list',[employeeController::class,'getData']);
+Route::get('member',[MemberNewController::class,'index']);
+Route::get('member',[MutatorController::class,'index']);
+Route::get('OnetoOneR',[MemberRController::class,'index']);
+Route::get('data',[MemberRController::class,'index2']);
