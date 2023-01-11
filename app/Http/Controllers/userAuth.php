@@ -13,3 +13,4 @@ class userAuth extends Controller
       return redirect('profile');   
     }
 }
+
